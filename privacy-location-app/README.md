@@ -2,6 +2,11 @@
 
 A privacy-first location sharing app - an ethical alternative to Life360.
 
+**✨ Access from anywhere: Phone, Tablet, or Computer!**
+- Works as a **website** on any device
+- Install as an **app** on iPhone, Android, or desktop
+- Progressive Web App (PWA) - works like a native app
+
 ## Why This App?
 
 Unlike commercial location sharing apps that sell your data, this app is built with privacy as the foundation:
@@ -15,13 +20,24 @@ Unlike commercial location sharing apps that sell your data, this app is built w
 
 ## Features
 
+**Privacy & Security:**
 - 🔐 End-to-end encrypted location sharing
-- 👥 Create private circles with friends and family
-- 📍 Real-time location updates
-- 🔔 Arrival/departure notifications
 - 🚫 Privacy zones (hide location at specific places)
 - ⏰ Temporary location sharing
+- 🗑️ Auto-deletion of old data
+
+**Sharing & Social:**
+- 👥 Create private circles with friends and family
+- 📍 Real-time location updates via WebSocket
+- 🔔 Arrival/departure notifications (coming soon)
+- 💬 Circle-based permissions
+
+**Mobile & Web:**
+- 📱 Progressive Web App - install on any device
+- 🌐 Works on iPhone, Android, and desktop browsers
+- 📴 Offline support with service worker
 - 🔋 Battery-efficient location tracking
+- 🗺️ Interactive maps (OpenStreetMap - no tracking!)
 
 ## Architecture
 
@@ -56,7 +72,30 @@ Unlike commercial location sharing apps that sell your data, this app is built w
 
 ## Quick Start
 
-See `/backend/README.md` and `/frontend/README.md` for setup instructions.
+### Local Development
+
+See `/backend/README.md` and `/frontend/README.md` for detailed setup instructions.
+
+**Quick start:**
+```bash
+# Backend
+cd backend && npm install && npm run dev
+
+# Frontend (new terminal)
+cd frontend && npm install && npm run dev
+```
+
+### Deploy to the Web
+
+Want to access from your phone or anywhere? See the **[Deployment Guide](docs/DEPLOYMENT.md)** for:
+
+- **Netlify/Vercel** (Frontend) - Free hosting
+- **Railway/Render** (Backend) - Free/low-cost hosting
+- **Docker** - Self-hosting with one command
+- **PWA Installation** - Install like a native app on any device
+
+**Estimated time**: 30 minutes to deploy
+**Cost**: Free tier available on most platforms
 
 ## Privacy Principles
 

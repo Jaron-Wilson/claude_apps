@@ -658,22 +658,286 @@ body {
   border-left: 3px solid var(--primary-color);
 }
 
+/* Mobile Responsive Styles */
 @media (max-width: 768px) {
-  .circles-layout {
-    grid-template-columns: 1fr;
+  /* Header adjustments */
+  .header {
+    padding: 0.75rem 1rem;
   }
 
   .header-content {
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.75rem;
+  }
+
+  .logo {
+    font-size: 1.125rem;
   }
 
   .nav {
+    width: 100%;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .nav-link {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+  }
+
+  /* Main content */
+  .main-content {
+    padding: 1rem;
+  }
+
+  /* Dashboard */
+  .dashboard-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
   }
 
   .dashboard-stats {
     grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .stat-card {
+    padding: 1rem;
+  }
+
+  .stat-icon {
+    font-size: 2rem;
+  }
+
+  .quick-actions h2 {
+    font-size: 1.25rem;
+  }
+
+  .action-buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .action-btn {
+    padding: 1.25rem;
+  }
+
+  /* Circles layout */
+  .circles-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .circles-sidebar {
+    order: 2;
+  }
+
+  .circle-details {
+    order: 1;
+    padding: 1rem;
+  }
+
+  .circle-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .circle-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .circle-actions button {
+    width: 100%;
+  }
+
+  /* Map controls */
+  .map-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .map-controls button {
+    width: 100%;
+  }
+
+  .control-group {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .control-group select {
+    width: 100%;
+  }
+
+  .map-container {
+    height: 400px !important;
+  }
+
+  /* Auth pages */
+  .auth-container {
+    padding: 1.5rem;
+  }
+
+  .auth-header h1 {
+    font-size: 1.5rem;
+  }
+
+  /* Settings */
+  .settings-section {
+    padding: 1rem;
+  }
+
+  .info-grid div {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+
+  .action-buttons button {
+    width: 100%;
+  }
+
+  /* Forms */
+  .form-group input {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+
+  /* Privacy notice */
+  .privacy-notice {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  /* Circles grid */
+  .circles-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Tablet and small screens */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .circles-layout {
+    grid-template-columns: 300px 1fr;
+  }
+
+  .dashboard-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .action-buttons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Touch-friendly improvements */
+@media (hover: none) and (pointer: coarse) {
+  /* Increase touch targets */
+  .btn {
+    min-height: 44px;
+    padding: 0.875rem 1.5rem;
+  }
+
+  .nav-link {
+    min-height: 44px;
+    padding: 0.75rem 1rem;
+  }
+
+  .action-btn {
+    min-height: 60px;
+  }
+
+  .circles-list li {
+    min-height: 60px;
+  }
+
+  /* Remove hover effects on touch devices */
+  .action-btn:hover {
+    transform: none;
+  }
+
+  .circles-list li:hover {
+    background: none;
+  }
+
+  /* Active states for touch feedback */
+  .btn:active {
+    transform: scale(0.98);
+  }
+
+  .action-btn:active {
+    transform: scale(0.98);
+  }
+}
+
+/* Landscape orientation on mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  .map-container {
+    height: 350px !important;
+  }
+
+  .dashboard-header {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 380px) {
+  .header {
+    padding: 0.5rem;
+  }
+
+  .logo-text {
+    display: none;
+  }
+
+  .main-content {
+    padding: 0.75rem;
+  }
+
+  .dashboard-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .stat-card {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Dark mode support (optional) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #111827;
+    --surface: #1f2937;
+    --text-primary: #f9fafb;
+    --text-secondary: #9ca3af;
+    --border: #374151;
+    --shadow: rgba(0, 0, 0, 0.3);
+  }
+
+  .auth-page {
+    background: var(--background);
+  }
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .action-btn:hover {
+    transform: none;
   }
 }

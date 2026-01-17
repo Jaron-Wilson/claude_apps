@@ -1,0 +1,22 @@
+ICON PLACEHOLDER
+
+You need to add app icons for the PWA to work properly.
+
+Create two PNG files:
+- icon-192.png (192x192 pixels)
+- icon-512.png (512x512 pixels)
+
+Quick way to generate icons:
+1. Use a tool like Canva, Figma, or GIMP
+2. Create a simple icon with:
+   - Background: #4f46e5 (purple)
+   - A lock emoji 🔐 or location pin 📍
+   - Text: "PL" or "Privacy Loc"
+
+Or use online generators:
+- https://www.pwabuilder.com/imageGenerator
+- https://realfavicongenerator.net/
+
+Upload both files to this directory (/public/) and delete this file.
+
+For now, the app will use default browser icons.

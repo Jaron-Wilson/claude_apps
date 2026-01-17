@@ -1,0 +1,22 @@
+# Render deployment configuration
+services:
+  - type: web
+    name: privacy-location-backend
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
+      - key: JWT_SECRET
+        generateValue: true
+      - key: ENCRYPTION_KEY
+        generateValue: true
+    healthCheckPath: /health
+
+databases:
+  - name: privacy-location-db
+    databaseName: privacy_location
+    user: privacy_location_user
