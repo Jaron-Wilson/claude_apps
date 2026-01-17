@@ -31,8 +31,8 @@ const mapHeight = map.length;
 
 // The Player
 const player = {
-    x: 5.5,          // Starting position X
-    y: 5.5,          // Starting position Y
+    x: 4.5,          // Starting position X
+    y: 4.5,          // Starting position Y
     dir: 0,          // Direction angle in radians (0 = facing right)
     plane: 0.66,     // Camera plane (FOV control)
     moveSpeed: 0.05, // Movement speed
