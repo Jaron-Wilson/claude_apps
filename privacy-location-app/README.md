@@ -87,15 +87,29 @@ cd frontend && npm install && npm run dev
 
 ### Deploy to the Web
 
-Want to access from your phone or anywhere? See the **[Deployment Guide](docs/DEPLOYMENT.md)** for:
+Want to access from your phone or anywhere?
 
+**🚀 Quick Deploy to GitHub Pages (Recommended):**
+
+See **[DEPLOY_TO_GITHUB_PAGES.md](DEPLOY_TO_GITHUB_PAGES.md)** for the easiest deployment!
+
+Or run the automated script:
+```bash
+cd privacy-location-app
+./deploy-github-pages.sh
+```
+
+**Other Options:**
+
+See the **[Full Deployment Guide](docs/DEPLOYMENT.md)** for:
+- **GitHub Pages** (Frontend) - FREE hosting ⭐
 - **Netlify/Vercel** (Frontend) - Free hosting
 - **Railway/Render** (Backend) - Free/low-cost hosting
 - **Docker** - Self-hosting with one command
 - **PWA Installation** - Install like a native app on any device
 
-**Estimated time**: 30 minutes to deploy
-**Cost**: Free tier available on most platforms
+**Estimated time**: 15-30 minutes to deploy
+**Cost**: $0/month with free tiers
 
 ## Privacy Principles
 
